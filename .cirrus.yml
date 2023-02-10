@@ -45,7 +45,7 @@ task:
 
       - export CCACHE_EXEC=/usr/bin/ccache
 
-      - ccache -M 150G
+      - ccache -M 70G
 
       - git clone https://github.com/TrebleDroid/treble_experimentations
 
