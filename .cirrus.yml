@@ -31,7 +31,13 @@ task:
       - echo "============================"
       - echo "Syncing The Sources..."
       - echo "============================"
-      - sudo apt-get update
+      - sudo apt-get update 
+      - echo "============================"
+
+      - echo "Syncing Complete!"
+
+      - echo "============================"
+      
  Cache_script:
       - echo "============================"
       - echo "Starting the Build..."
