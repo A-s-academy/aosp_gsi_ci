@@ -31,32 +31,27 @@ task:
       - echo "============================"
       - echo "Syncing The Sources..."
       - echo "============================"
-      - sudo apt-get update 
-      - echo "============================"
-
-      - echo "Syncing Complete!"
-
-      - echo "============================"
-      
- Cache_script:
-      - echo "============================"
-      - echo "Starting the Build..."
-      - echo "============================"
-    
-  
+      - sudo apt-get update
       - $EXTRA_CMD
+
       - export USE_CCACHE=1
+
       - export CCACHE_EXEC=/usr/bin/ccache
+
       - ccache -M 150G
+
       - git clone https://github.com/TrebleDroid/treble_experimentations
+
       - mkdir aosp13
+
       - cd aosp13
+
       - bash ../treble_experimentations/build.sh
+
+      
       
       - echo "============================"
-      - echo "Build finished Complete!"
+      - echo "Syncing Complete!"
       - echo "============================"
 
   
-
-      
