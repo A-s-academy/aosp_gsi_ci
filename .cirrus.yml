@@ -31,8 +31,15 @@ task:
       - echo "============================"
       - echo "Syncing The Sources..."
       - echo "============================"
-      - sudo apt-get update
+      - sudo apt-get update 
+      - curl https://storage.googleapis.com/git-repo-downloads/repo > repo
+      - chmod a+x repo
+      - PATH=$PATH:$PWD
+      - export PATH
       - $EXTRA_CMD
+
+      
+      
 
       - export USE_CCACHE=1
 
